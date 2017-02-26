@@ -2,3 +2,5 @@
 .viminfo
 .gitconfig
 .DS_Store
+.tgz
+*.o

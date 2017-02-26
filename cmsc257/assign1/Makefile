@@ -1,5 +1,5 @@
 #
-# CMSC257 - Utility Library 
+# CMSC257 - Utility Library
 # Code for the CMSC257 Projects
 #
 
@@ -23,8 +23,8 @@ cmsc257-s17-assign1 : $(OBJECT_FILES)
 cmsc257-s17-assign1.o : cmsc257-s17-assign1.c cmsc257-s17-assign1-support.h
 	$(CC) $(CFLAGS) $< -o $@
 
-cmsc257-s17-assign1-support.o : cmsc257-s17-assign1-support.c cmsc257-s17-assign1-support.h 
+cmsc257-s17-assign1-support.o : a1support.c cmsc257-s17-assign1-support.h
 	$(CC) $(CFLAGS) $< -o $@
 
-clean : 
+clean :
 	rm -f cmsc257-s17-assign1 $(OBJECT_FILES)
