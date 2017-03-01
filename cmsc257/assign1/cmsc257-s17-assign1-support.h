@@ -31,7 +31,7 @@ int countBits(int value);
 int most_values(int integers[], int count);
 	// Print out the values with the most occurences in array
 
-unsigned short reverseBits(int value);
+unsigned short reverseBits(unsigned short value);
         // Reverse the binary bit string
 
 void binaryString(int value);

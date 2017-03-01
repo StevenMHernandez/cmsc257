@@ -43,7 +43,11 @@ int main(int argc, char *argv[]) {
 
     // Step #2 - convert the floating point values to integers
     for (i=0; i<20; i++) {
-        m_array[i] = (int)f_array[i];
+        m_array[i] = (int)f_array[i]; // truncate
+		if (m_array[i] < 0) {
+			m_array[i] = (~m_array[i]) + 1; // take absolute value
+		}
+		m_array[i] = m_array[i] & 15; // mod 16
     }
 
     // Step #3 - print out the integer and floating point arrays
@@ -52,7 +56,8 @@ int main(int argc, char *argv[]) {
 
     // Step #4 - print out the number of '1's in each integer
     for (i=0; i<20; i++) {
-        printf("%d ", countBits(m_array[i]));
+        binaryString(m_array[i]);
+        printf("%d, ", countBits(m_array[i]));
     }
 
     printf("\n");
@@ -70,6 +75,8 @@ int main(int argc, char *argv[]) {
 
     // Step #8 - print the integers corresponding to the reverse bit string from integer array
     for (i=0; i<20; i++) {
+
+	        binaryString(reverseBits(m_array[i]));
         printf("%d, ", reverseBits(m_array[i]));
     }
 
