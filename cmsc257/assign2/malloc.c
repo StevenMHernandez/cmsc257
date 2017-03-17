@@ -2,7 +2,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <cmsc257-assign2-functions.h>
+#include "malloc.h"
 
 void *global_base = NULL;
 
