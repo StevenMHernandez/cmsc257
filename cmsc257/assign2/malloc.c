@@ -2,6 +2,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
+
 #include "malloc.h"
 
 void *global_base = NULL;
@@ -62,6 +63,7 @@ void *my_malloc(size_t size) {
                                 return NULL;
                         }
                 } else {
+			// TODO: split block here
                         block->free = 0;
                         block->magic = 0x77777777;
                 }
@@ -81,7 +83,7 @@ void my_free(void *ptr) {
                 return;
         }
 
-        // TODO: handle merging and splitting
+        // TODO: handle merging
         struct block_meta *block_ptr = get_block_ptr(ptr);
         assert(block_ptr->free == 0);
         assert(block_ptr->magic == 0x77777777 || block_ptr->magic == 0x12345678);
@@ -103,6 +105,7 @@ void *my_realloc(void *ptr, size_t size) {
 
         struct block_meta *block_ptr = get_block_ptr(ptr);
         if (block_ptr->size >= size) {
+		// split
                 return ptr;
         }
 
@@ -117,4 +120,20 @@ void *my_realloc(void *ptr, size_t size) {
         my_free(ptr);
 
         return new_ptr;
+}
+
+void print_malloc_usage() {
+	if (!global_base) {
+		printf("Nothing is currently allocated.");
+		return;
+	}
+	
+        struct block_meta *current = global_base;
+
+	printf("pointer       | free? | size | magic\n");
+
+        while (current) {
+		printf("%p %6d %6d %9d \n", current, current->free, current->size, current->magic);
+                current = current->next;
+        }
 }

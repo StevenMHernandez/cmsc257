@@ -52,6 +52,10 @@ int main(int argc, char *argv[]) {
 	printf("%p: %p: %d\n", &example2, example2, *example2);
 	printf("%p: %p: %d\n", &example3, example3, *example3);
 	printf("%p: %p: %d\n", &example4, example4, *example4);
+
+	my_free(example2);
+
+	print_malloc_usage();
 }
 
 
