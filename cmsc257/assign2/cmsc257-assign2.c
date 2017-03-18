@@ -95,13 +95,13 @@ int main(int argc, char *argv[]) {
 								*m_int_9 = 27;
 								// *m_int_10 = 36;
 
-								// free m_int_8
 								my_free(m_int_8);
 
 								// allocating another int sized block means
 								// this block will be the memory previously taken up my `m_int_8`
 								m_int_10 = my_malloc(sizeof(int));
 								assert(*m_int_10 == 18); // m_int_8's value before being freed
+								assert(m_int_8 == m_int_10); // m_int_8's value before being freed
 
 								print_malloc_usage();
 								printf("\n");
@@ -121,6 +121,10 @@ int main(int argc, char *argv[]) {
 								printf("m_short_3:       %p\n", m_short_3);
 								printf("\n");
 
+								assert(m_char_1 < m_char_11);
+								assert(m_char_11 < m_char_12);
+								assert(m_char_12 < m_short_3);
+
 								print_malloc_usage();
 								printf("\n");
 
@@ -129,6 +133,8 @@ int main(int argc, char *argv[]) {
 								char *c_char_3 = my_calloc(0x0100 - META_SIZE, 1); // calloc exactly enough so that pointers for this and the next calloc
 								char *c_char_4 = my_calloc(0x0100 - META_SIZE, 1); // are 0x.........a.. and 0x.........b.. where b = a + 1
 								char *c_char_5 = my_calloc(0x0100 - META_SIZE, 1);
+
+								assert(c_char_3 + 0x0100 = c_char_4);
 
 								my_free(c_char_1);
 
@@ -164,10 +170,14 @@ int main(int argc, char *argv[]) {
 								print_malloc_usage();
 								printf("\n");
 
+								struct block_meta *merged_blocks = get_block_ptr(m_short_3);
+
+								assert(merged_blocks->size > sizeof(short));
+
 								// because of these `free` calls, this should not have to malloc new memory
 								int *c_int_10 = my_calloc(2, 8);
 
-								//  assert(c_int_10 < c_int_9);
+								assert(c_int_10 < c_int_9);
 
 								print_malloc_usage();
 								printf("\n");
@@ -187,6 +197,10 @@ int main(int argc, char *argv[]) {
 								print_malloc_usage();
 								printf("\n");
 
+								assert(r_char_1 == c_char_11);
+								assert(r_char_2 == c_char_12);
+								assert(r_char_3 == c_char_12);
+
 								// shrink size again
 								char *r_char_4 = my_realloc(r_char_1, 0x30 - META_SIZE * 1);
 								char *r_char_5 = my_realloc(r_char_2, 0x30 - META_SIZE * 1);
@@ -194,6 +208,10 @@ int main(int argc, char *argv[]) {
 
 								print_malloc_usage();
 								printf("\n");
+
+								assert(r_char_4 == c_char_11);
+								assert(r_char_5 == c_char_12);
+								assert(r_char_6 == c_char_12);
 
 								// increase size
 								char *r_char_7 = my_realloc(r_char_4, 0x200 - META_SIZE * 1); // larger than original block, thus must be malloc-ed again
@@ -203,11 +221,18 @@ int main(int argc, char *argv[]) {
 								print_malloc_usage();
 								printf("\n");
 
+								assert(r_char_7 != c_char_11);
+								assert(r_char_7 > c_char_11); // because this realloc is larger than the space available
+								assert(r_char_8 == c_char_12);
+								assert(r_char_9 == c_char_12);
+
 								// this didn't successfully realloc last time, so we can retry without effecting r_char_7
 								char *r_char_10 = my_realloc(r_char_4, 0x60 - META_SIZE * 1);
 
 								print_malloc_usage();
 								printf("\n");
+
+								assert(r_char_10 == c_char_11);
 }
 
 
