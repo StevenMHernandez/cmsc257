@@ -28,12 +28,14 @@ int main(int argc, char *argv[]) {
 								/*
 								 * Start by testing best fit
 								 */
-
 								char *a = my_malloc(sizeof(char));
 								int *b = my_malloc(sizeof(int));  // will be freed, but should not be the best fit for a char
 								char *c = my_malloc(sizeof(char));
 								char *d = my_malloc(sizeof(char));  // will be freed, this should be best fit for a char
 								char *f = my_malloc(sizeof(char));
+
+								print_malloc_usage();
+								printf("\n");
 
 								my_free(b);
 								my_free(d);
@@ -48,6 +50,10 @@ int main(int argc, char *argv[]) {
 
 								assert(best_fit != b);
 								assert(best_fit == d);
+
+								// Trying again will have to take up b though, even though that means splitting
+								char *best_fit2 = my_malloc(sizeof(char));
+								assert(best_fit2 == b);
 
 								/*
 								 * Some initial variables
@@ -134,7 +140,7 @@ int main(int argc, char *argv[]) {
 								char *c_char_4 = my_calloc(0x0100 - META_SIZE, 1); // are 0x.........a.. and 0x.........b.. where b = a + 1
 								char *c_char_5 = my_calloc(0x0100 - META_SIZE, 1);
 
-								assert(c_char_3 + 0x0100 = c_char_4);
+								assert(c_char_3 + 0x0100 == c_char_4);
 
 								my_free(c_char_1);
 

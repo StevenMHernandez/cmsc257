@@ -10,13 +10,19 @@ void *global_base = NULL;
 
 struct block_meta *find_free_block(struct block_meta **last, size_t size) {
         struct block_meta *current = global_base;
+        struct block_meta *best_fit = NULL;
 
-        while (current && !(current->free && current->size >= size)) {
-                *last = current;
-                current = current->next;
+        while (current) {
+            // if current is free and current is large enough
+            // and either best_fit hasn't been found yet or current->size is better than best_fit->size
+            if (current->free && current->size >= size && (!best_fit || current->size < best_fit->size)) {
+                best_fit = current;
+            }
+            *last = current;
+            current = current->next;
         }
 
-        return current;
+        return best_fit;
 }
 
 struct block_meta *request_space(struct block_meta * last, size_t size) {
