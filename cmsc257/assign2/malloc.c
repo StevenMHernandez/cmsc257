@@ -2,6 +2,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <stdio.h>
 
 #include "malloc.h"
 
@@ -34,6 +35,7 @@ struct block_meta *request_space(struct block_meta * last, size_t size) {
         }
 
         block->size = size;
+        block->actual_size = size;
         block->next = NULL;
         block->free = 0;
         block->magic = 0x12345678;
@@ -63,9 +65,10 @@ void *my_malloc(size_t size) {
                                 return NULL;
                         }
                 } else {
-			// TODO: split block here
+                        // TODO: split block here
                         block->free = 0;
                         block->magic = 0x77777777;
+                        block->actual_size = size;
                 }
         }
 
@@ -92,10 +95,10 @@ void my_free(void *ptr) {
 }
 
 void *my_calloc(size_t nelem, size_t elsize) {
-    size_t size = nelem *elsize;
-    void *ptr = my_malloc(size);
-    memset(ptr, 0, size);
-    return ptr;
+        size_t size = nelem *elsize;
+        void *ptr = my_malloc(size);
+        memset(ptr, 0, size);
+        return ptr;
 }
 
 void *my_realloc(void *ptr, size_t size) {
@@ -105,7 +108,8 @@ void *my_realloc(void *ptr, size_t size) {
 
         struct block_meta *block_ptr = get_block_ptr(ptr);
         if (block_ptr->size >= size) {
-		// split
+                // split
+                block_ptr->actual_size = size;
                 return ptr;
         }
 
@@ -123,17 +127,17 @@ void *my_realloc(void *ptr, size_t size) {
 }
 
 void print_malloc_usage() {
-	if (!global_base) {
-		printf("Nothing is currently allocated.");
-		return;
-	}
-	
+        if (!global_base) {
+                printf("Nothing is currently allocated.");
+                return;
+        }
+
         struct block_meta *current = global_base;
 
-	printf("pointer       | free? | size | magic\n");
+        printf("pointer     |  free? |  size  | realsize |  magic\n");
 
         while (current) {
-		printf("%p %6d %6d %9d \n", current, current->free, current->size, current->magic);
+                printf("%p | %6d | %6zu | %8zu | %9xd \n", current, current->free, current->size, current->actual_size, current->magic);
                 current = current->next;
         }
 }
