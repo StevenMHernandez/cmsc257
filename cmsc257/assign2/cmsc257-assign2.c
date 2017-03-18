@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
 								long   *m_long_4;
 								float  *m_float_5;
 								double *m_double_6;
-								int   **m_int_pointer_7;
+								int   *m_int_7;
 								int    *m_int_8;
 								int    *m_int_9;
 								int    *m_int_10;
@@ -79,7 +79,7 @@ int main(int argc, char *argv[]) {
 								m_long_4 = my_malloc(sizeof(long));
 								m_float_5 = my_malloc(sizeof(float));
 								m_double_6 = my_malloc(sizeof(double));
-								m_int_pointer_7 = my_malloc(sizeof(m_int_pointer_7));
+								m_int_7 = my_malloc(sizeof(int));
 								m_int_8 = my_malloc(sizeof(int));
 								m_int_9 = my_malloc(sizeof(int));
 								// m_int_10 = my_malloc(sizeof(m_int_10));
@@ -96,7 +96,7 @@ int main(int argc, char *argv[]) {
 								*m_long_4 = 9999;
 								*m_float_5 = 9.99;
 								*m_double_6 = 9.99999999;
-								*m_int_pointer_7 = m_int_2;
+								*m_int_7 = m_int_2;
 								*m_int_8 = 18;
 								*m_int_9 = 27;
 								// *m_int_10 = 36;
@@ -109,27 +109,33 @@ int main(int argc, char *argv[]) {
 								assert(*m_int_10 == 18); // m_int_8's value before being freed
 								assert(m_int_8 == m_int_10); // m_int_8's value before being freed
 
-								print_malloc_usage();
-								printf("\n");
-
-								// free 8 blocks
-								my_free(m_int_2);
-
-								// we should be able to fit at least two characters in the space freed
-								// depending on our META_SIZE
-								char *m_char_11 = malloc(1);
-								char *m_char_12 = malloc(1);
-
-								printf("These addresses SHOULD all be in order\n");
-								printf("m_char_1:        %p\n", m_char_1);
-								printf("m_char_11:       %p\n", m_char_11);
-								printf("m_char_12:       %p\n", m_char_12);
-								printf("m_short_3:       %p\n", m_short_3);
-								printf("\n");
-
-								assert(m_char_1 < m_char_11);
-								assert(m_char_11 < m_char_12);
-								assert(m_char_12 < m_short_3);
+								// // free 8 blocks
+								// my_free(m_int_2);
+								//
+								// print_malloc_usage();
+								// printf("\n");
+								//
+								// // we should be able to fit at least two characters in the space freed
+								// // depending on our META_SIZE
+								// char *m_char_11 = malloc(1);
+								//
+								// print_malloc_usage();
+								// printf("\n");
+								// char *m_char_12 = malloc(1);
+								//
+								// print_malloc_usage();
+								// printf("\n");
+								//
+								// printf("These addresses SHOULD all be in order\n");
+								// printf("m_char_1:        %p\n", m_char_1);
+								// printf("m_char_11:       %p\n", m_char_11);
+								// printf("m_char_12:       %p\n", m_char_12);
+								// printf("m_short_3:       %p\n", m_short_3);
+								// printf("\n");
+								//
+								// assert(m_char_1 < m_char_11);
+								// assert(m_char_11 < m_char_12);
+								// assert(m_char_12 < m_short_3);
 
 								print_malloc_usage();
 								printf("\n");
@@ -167,11 +173,8 @@ int main(int argc, char *argv[]) {
 								/*
 								 * These frees should mean that blocks merge
 								 */
+								 my_free(m_long_4);
 								my_free(m_short_3);
-								my_free(m_long_4);
-								my_free(m_float_5);
-								my_free(m_double_6);
-								my_free(m_int_pointer_7);
 
 								print_malloc_usage();
 								printf("\n");
@@ -179,6 +182,26 @@ int main(int argc, char *argv[]) {
 								struct block_meta *merged_blocks = get_block_ptr(m_short_3);
 
 								assert(merged_blocks->size > sizeof(short));
+								assert(merged_blocks->size == sizeof(short) + META_SIZE + sizeof(long));
+
+								/*
+								 * free reverse order, we need to check to see if we can merge with previous parent
+								 */
+								my_free(m_double_6);
+								my_free(m_int_7);
+
+								struct block_meta *merged_blocks2 = get_block_ptr(m_double_6);
+
+								assert(merged_blocks->size == sizeof(double) + META_SIZE + sizeof(int));
+
+								/*
+								 * all 5 of these elements should merge now (at this point it should just be 3 elements)
+								 */
+								my_free(m_float_5);
+
+								struct block_meta *merged_blocks3 = get_block_ptr(m_short_3);
+
+								assert(merged_blocks3->size == (META_SIZE * 4) + sizeof(short) + sizeof(long) + sizeof(float) + sizeof(double) + sizeof(float));
 
 								// because of these `free` calls, this should not have to malloc new memory
 								int *c_int_10 = my_calloc(2, 8);
@@ -249,7 +272,7 @@ int main(int argc, char *argv[]) {
    m_long_4
    m_float_5
    m_double_6
-   m_int_pointer_7
+   m_int_7
    m_int_8
    m_int_9
    m_int_10

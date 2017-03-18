@@ -75,6 +75,22 @@ void *my_malloc(size_t size) {
                         block->free = 0;
                         block->magic = 0x77777777;
                         block->actual_size = size;
+
+                        // // if the block size is greater than the size we are requesting + META_SIZE + 1,
+                        // // then we should split to prevent memory leaks.
+                        // // NOTE: if there is not enough space for the meta block though, we are still losing space.
+                        // if (block->size > size + META_SIZE + 1) {
+                        //     // new_block will be placed at the pointer of block + the size a that block's metadata and the size allocated in the malloc request.
+                        //     struct block_meta *new_block = ((void*)&block) + META_SIZE + size;
+                        //
+                        //     new_block->size = block->size - size - META_SIZE;
+                        //     new_block->actual_size = new_block->size;
+                        //     new_block->next = block->next;
+                        //     new_block->free = 1;
+                        //     new_block->magic = 0x99999999;
+                        //
+                        //     block->next = new_block;
+                        // }
                 }
         }
 
@@ -98,6 +114,11 @@ void my_free(void *ptr) {
         assert(block_ptr->magic == 0x77777777 || block_ptr->magic == 0x12345678);
         block_ptr->free = 1;
         block_ptr->magic = 0x55555555;
+
+        if (block_ptr->next && block_ptr->next->free) {
+            block_ptr->size += block_ptr->next->size + META_SIZE;
+            block_ptr->next = block_ptr->next->next;
+        }
 }
 
 void *my_calloc(size_t nelem, size_t elsize) {
