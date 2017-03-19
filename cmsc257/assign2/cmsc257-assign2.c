@@ -23,8 +23,6 @@
 //
 // Outputs      : 0 if successful test, -1 if failure
 int main(int argc, char *argv[]) {
-								printf("META_SIZE: %d\n", META_SIZE);
-
 								/*
 								 * Start by testing best fit
 								 */
@@ -106,36 +104,8 @@ int main(int argc, char *argv[]) {
 								// allocating another int sized block means
 								// this block will be the memory previously taken up my `m_int_8`
 								m_int_10 = my_malloc(sizeof(int));
-								assert(*m_int_10 == 18); // m_int_8's value before being freed
-								assert(m_int_8 == m_int_10); // m_int_8's value before being freed
-
-								// // free 8 blocks
-								// my_free(m_int_2);
-								//
-								// print_malloc_usage();
-								// printf("\n");
-								//
-								// // we should be able to fit at least two characters in the space freed
-								// // depending on our META_SIZE
-								// char *m_char_11 = malloc(1);
-								//
-								// print_malloc_usage();
-								// printf("\n");
-								// char *m_char_12 = malloc(1);
-								//
-								// print_malloc_usage();
-								// printf("\n");
-								//
-								// printf("These addresses SHOULD all be in order\n");
-								// printf("m_char_1:        %p\n", m_char_1);
-								// printf("m_char_11:       %p\n", m_char_11);
-								// printf("m_char_12:       %p\n", m_char_12);
-								// printf("m_short_3:       %p\n", m_short_3);
-								// printf("\n");
-								//
-								// assert(m_char_1 < m_char_11);
-								// assert(m_char_11 < m_char_12);
-								// assert(m_char_12 < m_short_3);
+								assert(*m_int_10 == 18);
+								assert(m_int_8 == m_int_10);
 
 								print_malloc_usage();
 								printf("\n");
@@ -252,52 +222,38 @@ int main(int argc, char *argv[]) {
 								print_malloc_usage();
 								printf("\n");
 
-								// assert(r_char_7 != c_char_11);
-								// assert(r_char_7 > c_char_11); // because this realloc is larger than the space available
-								// assert(r_char_8 == c_char_12);
-								// assert(r_char_9 == c_char_13);
+								assert(r_char_7 != c_char_11);
+								assert(r_char_7 > c_char_11); // because this realloc is larger than the space available
+								assert(r_char_8 == c_char_12);
+								assert(r_char_9 == c_char_13);
 
-								// // this didn't successfully realloc last time, so we can retry without effecting r_char_7
-								// char *r_char_10 = my_realloc(r_char_4, 0x60 - META_SIZE * 1);
-								//
-								// print_malloc_usage();
-								// printf("\n");
-								//
-								// assert(r_char_10 == c_char_11);
-								//
-								// /*
-								//  * attempt splitting
-								//  */
-								// print_malloc_usage();
-								// printf("\n");
-								//
-								// int *m = my_calloc(2000, sizeof(int));
-								// int *n = my_calloc(2000, sizeof(int));
-								// int *o = my_calloc(2000, sizeof(int));
-								//
-								// my_free(n);
-								//
-								// int *split1 = my_calloc(200, sizeof(int));
-								// int *split2 = my_calloc(200, sizeof(int));
-								//
-								// print_malloc_usage();
-								// printf("\n");
-								//
-								// assert(m < split1);
-								// assert(split1 < split2);
-								// assert(split2 < o);
+								// this didn't successfully realloc last time, so we can retry without effecting r_char_7
+								char *r_char_10 = my_realloc(r_char_4, 0x60 - META_SIZE * 1);
+
+								print_malloc_usage();
+								printf("\n");
+
+								assert(r_char_10 == c_char_11);
+
+								/*
+								 * attempt splitting
+								 */
+								print_malloc_usage();
+								printf("\n");
+
+								int *m = my_calloc(2000, sizeof(int));
+								int *n = my_calloc(2000, sizeof(int));
+								int *o = my_calloc(2000, sizeof(int));
+
+								my_free(n);
+
+								int *split1 = my_calloc(200, sizeof(int));
+								int *split2 = my_calloc(200, sizeof(int));
+
+								print_malloc_usage();
+								printf("\n");
+
+								assert(m < split1);
+								assert(split1 < split2);
+								assert(split2 < o);
 }
-
-
-/*
-   m_char_1
-   m_int_2
-   m_short_3
-   m_long_4
-   m_float_5
-   m_double_6
-   m_int_7
-   m_int_8
-   m_int_9
-   m_int_10
- */

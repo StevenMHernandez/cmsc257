@@ -160,6 +160,16 @@ void *my_realloc(void *ptr, size_t size) {
                 split(block_ptr, size);
                 block_ptr->actual_size = size;
                 return ptr;
+        } else if (block_ptr->next->free && block_ptr->size + META_SIZE + block_ptr->next->size >= size) {
+                // if the next block is free, we can join the blocks to have an even larger sized chunk
+                block_ptr->size += META_SIZE + block_ptr->next->size;
+
+                block_ptr->next = block_ptr->next->next;
+
+                // we can now do the same exact process as above
+                split(block_ptr, size);
+                block_ptr->actual_size = size;
+                return ptr;
         }
 
         void *new_ptr;
