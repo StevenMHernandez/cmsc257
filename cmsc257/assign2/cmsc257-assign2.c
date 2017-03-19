@@ -173,7 +173,7 @@ int main(int argc, char *argv[]) {
 								/*
 								 * These frees should mean that blocks merge
 								 */
-								 my_free(m_long_4);
+								my_free(m_long_4);
 								my_free(m_short_3);
 
 								print_malloc_usage();
@@ -191,8 +191,10 @@ int main(int argc, char *argv[]) {
 								my_free(m_int_7);
 
 								struct block_meta *merged_blocks2 = get_block_ptr(m_double_6);
+								print_malloc_usage();
+								printf("\n");
 
-								assert(merged_blocks->size == sizeof(double) + META_SIZE + sizeof(int));
+								assert(merged_blocks2->size == sizeof(double) + META_SIZE + sizeof(int));
 
 								/*
 								 * all 5 of these elements should merge now (at this point it should just be 3 elements)
@@ -228,7 +230,7 @@ int main(int argc, char *argv[]) {
 
 								assert(r_char_1 == c_char_11);
 								assert(r_char_2 == c_char_12);
-								assert(r_char_3 == c_char_12);
+								assert(r_char_3 == c_char_13);
 
 								// shrink size again
 								char *r_char_4 = my_realloc(r_char_1, 0x30 - META_SIZE * 1);
@@ -240,7 +242,7 @@ int main(int argc, char *argv[]) {
 
 								assert(r_char_4 == c_char_11);
 								assert(r_char_5 == c_char_12);
-								assert(r_char_6 == c_char_12);
+								assert(r_char_6 == c_char_13);
 
 								// increase size
 								char *r_char_7 = my_realloc(r_char_4, 0x200 - META_SIZE * 1); // larger than original block, thus must be malloc-ed again
@@ -250,18 +252,40 @@ int main(int argc, char *argv[]) {
 								print_malloc_usage();
 								printf("\n");
 
-								assert(r_char_7 != c_char_11);
-								assert(r_char_7 > c_char_11); // because this realloc is larger than the space available
-								assert(r_char_8 == c_char_12);
-								assert(r_char_9 == c_char_12);
+								// assert(r_char_7 != c_char_11);
+								// assert(r_char_7 > c_char_11); // because this realloc is larger than the space available
+								// assert(r_char_8 == c_char_12);
+								// assert(r_char_9 == c_char_13);
 
-								// this didn't successfully realloc last time, so we can retry without effecting r_char_7
-								char *r_char_10 = my_realloc(r_char_4, 0x60 - META_SIZE * 1);
-
-								print_malloc_usage();
-								printf("\n");
-
-								assert(r_char_10 == c_char_11);
+								// // this didn't successfully realloc last time, so we can retry without effecting r_char_7
+								// char *r_char_10 = my_realloc(r_char_4, 0x60 - META_SIZE * 1);
+								//
+								// print_malloc_usage();
+								// printf("\n");
+								//
+								// assert(r_char_10 == c_char_11);
+								//
+								// /*
+								//  * attempt splitting
+								//  */
+								// print_malloc_usage();
+								// printf("\n");
+								//
+								// int *m = my_calloc(2000, sizeof(int));
+								// int *n = my_calloc(2000, sizeof(int));
+								// int *o = my_calloc(2000, sizeof(int));
+								//
+								// my_free(n);
+								//
+								// int *split1 = my_calloc(200, sizeof(int));
+								// int *split2 = my_calloc(200, sizeof(int));
+								//
+								// print_malloc_usage();
+								// printf("\n");
+								//
+								// assert(m < split1);
+								// assert(split1 < split2);
+								// assert(split2 < o);
 }
 
 

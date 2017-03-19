@@ -23,3 +23,5 @@ void *my_calloc(size_t nelem, size_t elsize);
 void *my_realloc(void *ptr, size_t size);
 
 void print_malloc_usage();
+
+void split(struct block_meta *block, size_t size);

@@ -8,18 +8,28 @@
 
 void *global_base = NULL;
 
+struct block_meta *find_parent_block(struct block_meta *child) {
+        struct block_meta *parent = global_base;
+
+        while (parent && parent->next != child) {
+                parent = parent->next;
+        }
+
+        return parent;
+}
+
 struct block_meta *find_free_block(struct block_meta **last, size_t size) {
         struct block_meta *current = global_base;
         struct block_meta *best_fit = NULL;
 
         while (current) {
-            // if current is free and current is large enough
-            // and either best_fit hasn't been found yet or current->size is better than best_fit->size
-            if (current->free && current->size >= size && (!best_fit || current->size < best_fit->size)) {
-                best_fit = current;
-            }
-            *last = current;
-            current = current->next;
+                // if current is free and current is large enough
+                // and either best_fit hasn't been found yet or current->size is better than best_fit->size
+                if (current->free && current->size >= size && (!best_fit || current->size < best_fit->size)) {
+                        best_fit = current;
+                }
+                *last = current;
+                current = current->next;
         }
 
         return best_fit;
@@ -71,32 +81,37 @@ void *my_malloc(size_t size) {
                                 return NULL;
                         }
                 } else {
-                        // TODO: split block here
                         block->free = 0;
                         block->magic = 0x77777777;
                         block->actual_size = size;
 
-                        // // if the block size is greater than the size we are requesting + META_SIZE + 1,
-                        // // then we should split to prevent memory leaks.
-                        // // NOTE: if there is not enough space for the meta block though, we are still losing space.
-                        // if (block->size > size + META_SIZE + 1) {
-                        //     // new_block will be placed at the pointer of block + the size a that block's metadata and the size allocated in the malloc request.
-                        //     struct block_meta *new_block = ((void*)&block) + META_SIZE + size;
-                        //
-                        //     new_block->size = block->size - size - META_SIZE;
-                        //     new_block->actual_size = new_block->size;
-                        //     new_block->next = block->next;
-                        //     new_block->free = 1;
-                        //     new_block->magic = 0x99999999;
-                        //
-                        //     block->next = new_block;
-                        // }
+                        split(block, size);
                 }
         }
 
         // REMEMBER: we are first placing `block_meta` before the real data
         // incrementing by 1 actual increments our address by size_of(block_meta)
         return (block + 1);
+}
+
+// if the block size is greater than the size we are requesting + META_SIZE + 1,
+// then we should split to prevent memory leaks.
+// NOTE: if there is not enough space for the meta block though, we are still losing space.
+void split(struct block_meta *block, size_t size) {
+        if (block->size > size + META_SIZE + 1) {
+                // new_block will be placed at the pointer of block + the size a that block's metadata and the size allocated in the malloc request.
+                struct block_meta *new_block = ((void*)block) + META_SIZE + size;
+
+                new_block->size = block->size - size - META_SIZE;
+                new_block->actual_size = new_block->size;
+                new_block->next = block->next;
+                new_block->free = 1;
+                new_block->magic = 0x99999999;
+
+                block->size = size;
+                block->actual_size = size;
+                block->next = new_block;
+        }
 }
 
 struct block_meta *get_block_ptr(void *ptr) {
@@ -108,17 +123,24 @@ void my_free(void *ptr) {
                 return;
         }
 
-        // TODO: handle merging
         struct block_meta *block_ptr = get_block_ptr(ptr);
         assert(block_ptr->free == 0);
-        assert(block_ptr->magic == 0x77777777 || block_ptr->magic == 0x12345678);
         block_ptr->free = 1;
         block_ptr->magic = 0x55555555;
 
+        // Handle merging with child (next)
         if (block_ptr->next && block_ptr->next->free) {
-            block_ptr->size += block_ptr->next->size + META_SIZE;
-            block_ptr->next = block_ptr->next->next;
+                block_ptr->size += block_ptr->next->size + META_SIZE;
+                block_ptr->next = block_ptr->next->next;
         }
+        // Handle merging with parent (prev)
+        struct block_meta *parent_ptr = find_parent_block(block_ptr);
+        if (parent_ptr && parent_ptr->free) {
+                parent_ptr->size += block_ptr->size + META_SIZE;
+                parent_ptr->next = block_ptr->next;
+        }
+
+        block_ptr->actual_size = block_ptr->size;
 }
 
 void *my_calloc(size_t nelem, size_t elsize) {
@@ -135,7 +157,7 @@ void *my_realloc(void *ptr, size_t size) {
 
         struct block_meta *block_ptr = get_block_ptr(ptr);
         if (block_ptr->size >= size) {
-                // split
+                split(block_ptr, size);
                 block_ptr->actual_size = size;
                 return ptr;
         }
