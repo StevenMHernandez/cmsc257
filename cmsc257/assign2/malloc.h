@@ -3,7 +3,6 @@ struct block_meta {
         size_t actual_size; // Remove after implimenting splitting and merging
         struct block_meta *next;
         int free;
-        int magic; // @SEE `malloc-tutorial` documentation, this should be removed in non-debug mode.
 };
 
 #define META_SIZE sizeof(struct block_meta)

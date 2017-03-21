@@ -36,9 +36,11 @@ struct block_meta *find_free_block(struct block_meta **last, size_t size) {
 }
 
 struct block_meta *request_space(struct block_meta * last, size_t size) {
+        size_t padded_size = size % 8 ? size : (size - (size % 8) + 8);
+
         struct block_meta *block;
         block = sbrk(0);
-        void *request = sbrk(size + META_SIZE);
+        void *request = sbrk(padded_size + META_SIZE);
 
         assert((void*)block == request); // Not thread safe.
 
@@ -50,11 +52,10 @@ struct block_meta *request_space(struct block_meta * last, size_t size) {
                 last->next = block;
         }
 
-        block->size = size;
+        block->size = padded_size;
         block->actual_size = size;
         block->next = NULL;
         block->free = 0;
-        block->magic = 0x12345678;
 
         return block;
 }
@@ -82,7 +83,6 @@ void *my_malloc(size_t size) {
                         }
                 } else {
                         block->free = 0;
-                        block->magic = 0x77777777;
                         block->actual_size = size;
 
                         split(block, size);
@@ -106,7 +106,6 @@ void split(struct block_meta *block, size_t size) {
                 new_block->actual_size = new_block->size;
                 new_block->next = block->next;
                 new_block->free = 1;
-                new_block->magic = 0x99999999;
 
                 block->size = size;
                 block->actual_size = size;
@@ -126,7 +125,6 @@ void my_free(void *ptr) {
         struct block_meta *block_ptr = get_block_ptr(ptr);
         assert(block_ptr->free == 0);
         block_ptr->free = 1;
-        block_ptr->magic = 0x55555555;
 
         // Handle merging with child (next)
         if (block_ptr->next && block_ptr->next->free) {
@@ -193,10 +191,15 @@ void print_malloc_usage() {
 
         struct block_meta *current = global_base;
 
-        printf("pointer     |  free? |  size  | realsize |  magic\n");
+        printf("pointer     |  free? |  size  | realsize | mem-leak | leak reason\n");
 
         while (current) {
-                printf("%p | %6d | %6zu | %8zu | %9xd \n", current, current->free, current->size, current->actual_size, current->magic);
+            int leak = current->size - current->actual_size;
+                printf("%p | %6d | %6zu | %8zu | %8lu | ", current, current->free, current->size, current->actual_size, current->free ? current->size : leak);
+                if (current->size - current->actual_size > 0 || current->free) {
+                        printf(current->free ? "Memory is free" : "META_SIZE > free space");
+                }
+                printf("\n");
                 current = current->next;
         }
 }
