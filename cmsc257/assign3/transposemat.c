@@ -32,7 +32,8 @@ void multiply (double **a, double **b, double **c, int n)
        for (j=0; j<n; j++)
        {
          for (k=0; k<n; k++)
-           c[i][j]= c[i][j] + a[i][k] * b[k][j];
+           // multiply the transpose
+           c[i][j]= c[i][j] + a[i][k] * b[j][k];
         }
      }
   }
@@ -66,7 +67,8 @@ int main (void)
      for (i=0; i<n; i++)
      {
         for (j=0; j<n; j++)
-          b[i][j]=7;
+          // store in the transpose
+          b[j][i]=7;
       }
 
       start = ftime();
