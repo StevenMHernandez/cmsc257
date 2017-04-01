@@ -30,7 +30,7 @@ void multiply (double **a, double **b, double **c, int n)
                         c[i][j] = 0;
         }
 
-        int step = 8;
+        int step = 256;
         int forks = 0;
 
         for (i0 = 0; i0 < n; i0 += step) {
