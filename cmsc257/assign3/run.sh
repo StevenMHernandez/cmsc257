@@ -2,6 +2,7 @@
 make clean
 make
 
+echo ""
 echo "running in the background."
 echo "check back later on"
 

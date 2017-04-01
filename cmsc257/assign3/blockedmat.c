@@ -64,6 +64,7 @@ int main (void)
         int i, j, n;
         double **a, **b, **c;
 
+        printf ("Testing large matrixes \n");
         printf ( "Enter the value of n: ");
         scanf ( "%d", &n);
         printf("%d", n);

@@ -88,7 +88,7 @@ struct validationMatrix *buildValidationMatrix(int transpose) {
 }
 
 void validate(struct validationMatrix *validationMatrix) {
-        int i, j, m;
+        int i, j, m, errors = 0;
 
         printf("Validating matrix multiplication on smaller matrix\n");
         printf("      A      x      B        =    computed        expected\n");
@@ -105,27 +105,15 @@ void validate(struct validationMatrix *validationMatrix) {
                                 } else if (m == 3) {
                                         printf("%2d ", (int)validationMatrix->expected[i][j]);
                                 }
+
+                                if (validationMatrix->c[i][j] != validationMatrix->expected[i][j]) {
+                                        errors++;
+                                }
                         }
                         printf("    ");
                 }
                 printf("\n");
         }
-        // printf("             = \n");
-        // printf("  computed       expected\n");
-        //
-        // for (i = 0; i < 4; i++) { // for each row
-        //         for (m = 0; m < 2; m++) { // for both matrixes (c and expected)
-        //                 for (j = 0; j < 4; j++) {
-        //                         if (m == 0) {
-        //                                 printf("%2d ", (int)validationMatrix->c[i][j]);
-        //                         } else {
-        //                                 printf("%2d ", (int)validationMatrix->expected[i][j]);
-        //                         }
-        //                 }
-        //                 printf("    ");
-        //         }
-        //         printf("\n");
-        // }
 
-        printf("\n");
+        printf("%d errors found when validating\n\n", errors);
 }
