@@ -100,7 +100,7 @@ int main (void)
         printf ( "Elapsed time:   %10.2f \n", used);
         printf ( "DP MFLOPS:       %10.2f \n", mf);
 
-      mytime = time(NULL);
-      printf("\n\nReport completed: %s\n", ctime(&mytime));
+        mytime = time(NULL);
+        printf("\n\nReport completed: %s\n", ctime(&mytime));
         return (0);
 }
