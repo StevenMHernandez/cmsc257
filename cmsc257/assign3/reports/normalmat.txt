@@ -1,17 +1,17 @@
-Report began: Sat Apr  1 12:20:06 2017
+Report began: Sat Apr  1 12:29:29 2017
 
 
 Validating matrix multiplication on smaller matrix
-  computed   |   expected
-36  6  0 81     36  6  0 81     
- 0  0  6  0      0  0  6  0     
- 0  3  0  0      0  3  0  0     
- 0  0  2  0      0  0  2  0     
+      A      x      B        =    computed        expected
+ 9  0  0  2      4  0  0  9     36  6  0 81     36  6  0 81     
+ 0  3  2  0      0  0  2  0      0  0  6  0      0  0  6  0     
+ 0  0  0  1      0  0  0  0      0  3  0  0      0  3  0  0     
+ 0  1  0  0      0  3  0  0      0  0  2  0      0  0  2  0     
 
 Enter the value of n: 1024
-Elapsed time:        16.81 
-DP MFLOPS:           127.75 
+Elapsed time:        17.32 
+DP MFLOPS:           123.99 
 
 
-Report completed: Sat Apr  1 12:20:25 2017
+Report completed: Sat Apr  1 12:29:49 2017
 

@@ -91,14 +91,18 @@ void validate(struct validationMatrix *validationMatrix) {
         int i, j, m;
 
         printf("Validating matrix multiplication on smaller matrix\n");
-        printf("  computed   |   expected\n");
+        printf("      A      x      B        =    computed        expected\n");
 
         for (i = 0; i < 4; i++) { // for each row
-                for (m = 0; m < 2; m++) { // for both matrixes (c and expected)
+                for (m = 0; m < 4; m++) { // for both matrixes (a, b, c and expected)
                         for (j = 0; j < 4; j++) {
                                 if (m == 0) {
+                                        printf("%2d ", (int)validationMatrix->a[i][j]);
+                                } else if (m == 1) {
+                                        printf("%2d ", (int)validationMatrix->b[i][j]);
+                                } else if (m == 2) {
                                         printf("%2d ", (int)validationMatrix->c[i][j]);
-                                } else {
+                                } else if (m == 3) {
                                         printf("%2d ", (int)validationMatrix->expected[i][j]);
                                 }
                         }
@@ -106,6 +110,22 @@ void validate(struct validationMatrix *validationMatrix) {
                 }
                 printf("\n");
         }
+        // printf("             = \n");
+        // printf("  computed       expected\n");
+        //
+        // for (i = 0; i < 4; i++) { // for each row
+        //         for (m = 0; m < 2; m++) { // for both matrixes (c and expected)
+        //                 for (j = 0; j < 4; j++) {
+        //                         if (m == 0) {
+        //                                 printf("%2d ", (int)validationMatrix->c[i][j]);
+        //                         } else {
+        //                                 printf("%2d ", (int)validationMatrix->expected[i][j]);
+        //                         }
+        //                 }
+        //                 printf("    ");
+        //         }
+        //         printf("\n");
+        // }
 
         printf("\n");
 }
