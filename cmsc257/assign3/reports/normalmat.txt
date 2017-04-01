@@ -1,3 +1,17 @@
+Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+36  6  0 81     36  6  0 81     
+ 0  0  6  0      0  0  6  0     
+ 0  3  0  0      0  3  0  0     
+ 0  0  2  0      0  0  2  0     
+
 Enter the value of n: 
-Elapsed time:         0.00 
-DP MFLOPS:              inf 
+Elapsed time:        12.73 
+DP MFLOPS:           168.69 
+
+
+Report completed: Sat Apr  1 10:42:22 2017
+

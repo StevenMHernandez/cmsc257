@@ -1,10 +1,8 @@
 # build everything
-gcc normalmat.c -o normalmat.out
-gcc transposemat.c -o transposemat.out
-gcc blockedmat.c -o blockedmat.out
-gcc threadedmat.c -o threadedmat.out
+make clean
+make
 
-echo 100 | ./normalmat.out > reports/normalmat.txt
-echo 100 | ./transposemat.out > reports/transposemat.txt
-echo 100 | ./blockedmat.out > reports/blockedmat.txt
-echo 100 | ./threadedmat.out > reports/threadedmat.txt
+echo 1024 | ./normalmat > reports/normalmat.txt &
+echo 1024 | ./transposemat > reports/transposemat.txt &
+echo 1024 | ./blockedmat > reports/blockedmat.txt &
+echo 1024 | ./threadedmat > reports/threadedmat.txt &

@@ -1,2 +1,6 @@
 *.out
 *.dSYM
+normalmat
+transposemat
+blockedmat
+threadedmat

@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <time.h>
+#include "base_matrix_functions.c"
 
 #define MIN(a,b) (a > b ? b : a)
 
@@ -62,6 +64,17 @@ void multiply (double **a, double **b, double **c, int n)
 
 int main (void)
 {
+        time_t mytime;
+        mytime = time(NULL);
+        printf("Report began: %s\n\n", ctime(&mytime));
+
+    // validate matrix multiplication
+    struct validationMatrix * validator = buildValidationMatrix();
+
+    multiply(validator->a,validator->b,validator->c, 4);
+
+    validate(validator);
+
         int i, j, n;
         double **a, **b, **c;
 
@@ -100,5 +113,8 @@ int main (void)
         printf ("\n");
         printf ( "Elapsed time:   %10.2f \n", used);
         printf ( "DP MFLOPS:       %10.2f \n", mf);
+
+      mytime = time(NULL);
+      printf("\n\nReport completed: %s\n", ctime(&mytime));
         return (0);
 }

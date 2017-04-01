@@ -1,3 +1,660 @@
-Enter the value of n: Enter the value of n: 
-Elapsed time:         0.00 
-DP MFLOPS:              inf 
+Report began: Sat Apr  1 10:42:07 2017
+
+
+Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+
+
+Validating matrix multiplication on smaller matrix
+  computed   |   expected
+ 0  0  0  0     36  6  0 81     
+ 0  0  0  0      0  0  6  0     
+ 0  0  0  0      0  3  0  0     
+ 0  0  0  0      0  0  2  0     
+
+Enter the value of n: 
+Elapsed time:         0.03 
+DP MFLOPS:         71582.79 
+
+
+Report completed: Sat Apr  1 10:42:09 2017
+

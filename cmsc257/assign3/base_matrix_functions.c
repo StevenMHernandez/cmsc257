@@ -79,6 +79,7 @@ struct validationMatrix *buildValidationMatrix() {
 void validate(struct validationMatrix *validationMatrix) {
         int i, j, m;
 
+        printf("Validating matrix multiplication on smaller matrix\n");
         printf("  computed   |   expected\n");
 
         for (i = 0; i < 4; i++) { // for each row
@@ -94,36 +95,6 @@ void validate(struct validationMatrix *validationMatrix) {
                 }
                 printf("\n");
         }
-}
 
-void multiply (double **a, double **b, double **c, int n)
-{
-        int i, j, k;
-
-        for (i=0; i<n; i++)
-        {
-                for (j=0; j<n; j++)
-
-                        c[i][j] = 0;
-        }
-
-        for (i=0; i<n; i++)
-        {
-                for (j=0; j<n; j++)
-                {
-                        for (k=0; k<n; k++)
-                                c[i][j]= c[i][j] + a[i][k] * b[k][j];
-                }
-        }
-}
-
-int main (void)
-{
-        struct validationMatrix * validator = buildValidationMatrix();
-
-        multiply(validator->a,validator->b,validator->c, 4);
-
-        validate(validator);
-
-        return (0);
+        printf("\n");
 }
