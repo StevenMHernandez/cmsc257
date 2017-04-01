@@ -57,6 +57,7 @@ int main (void)
 
         printf ( "Enter the value of n: ");
         scanf ( "%d", &n);
+        printf("%d", n);
 
         //Populate arrays....
         a= (double**)malloc(n*sizeof(double));

@@ -39,4 +39,4 @@ base_matrix_functions.o : base_matrix_functions.c
 	$(CC) $(CFLAGS) $< -o $@
 
 clean :
-	rm -f normalmat $(OBJECT_FILES)
+	rm -f normalmat transposemat blockedmat threadedmat normalmat.o transposemat.o blockedmat.o threadedmat.o $(OBJECT_FILES)

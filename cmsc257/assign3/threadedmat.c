@@ -53,7 +53,7 @@ void multiply (double **a, double **b, double **c, int n)
                                                         }
                                                 }
                                         }
-                                        exit(0);
+                                        _exit(0);
                                 }
                         }
                 }
@@ -80,6 +80,7 @@ int main (void)
 
         printf ( "Enter the value of n: ");
         scanf ( "%d", &n);
+        printf("%d", n);
 
         //Populate arrays....
         a= (double**)malloc(n*sizeof(double));
@@ -106,7 +107,7 @@ int main (void)
         }
 
         start = ftime();
-        multiply (a,b,c,n);
+        multiply(a,b,c,n);
         stop = ftime();
         used = stop - start;
         mf = (n*n*n *2.0) / used / 1000000.0;
