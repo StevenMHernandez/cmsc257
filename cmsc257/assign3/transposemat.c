@@ -34,7 +34,6 @@ void multiply (double **a, double **b, double **c, int n)
                 for (j=0; j<n; j++)
                 {
                         for (k=0; k<n; k++)
-                                // multiply the transpose
                                 c[i][j]= c[i][j] + a[i][k] * b[j][k];
                 }
         }
@@ -47,7 +46,7 @@ int main (void)
         printf("Report began: %s\n\n", ctime(&mytime));
 
         // validate matrix multiplication
-        struct validationMatrix * validator = buildValidationMatrix();
+        struct validationMatrix * validator = buildValidationMatrix(1);
 
         multiply(validator->a,validator->b,validator->c, 4);
 

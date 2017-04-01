@@ -1,7 +1,7 @@
-Report began: Sat Apr  1 10:42:07 2017
+Report began: Sat Apr  1 11:03:19 2017
 
 
-Report began: Sat Apr  1 10:42:07 2017
+Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -11,7 +11,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -21,7 +21,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -31,7 +31,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -41,7 +41,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -51,7 +51,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -61,7 +61,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -71,7 +71,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -81,7 +81,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -91,7 +91,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -101,7 +101,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -111,7 +111,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -121,7 +121,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -131,7 +131,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -141,7 +141,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -151,7 +151,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -161,7 +161,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -171,7 +171,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -181,7 +181,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -191,7 +191,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -201,7 +201,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -211,7 +211,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -221,7 +221,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -231,7 +231,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -241,7 +241,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -251,7 +251,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -261,7 +261,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -271,7 +271,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -281,7 +281,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -291,7 +291,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -301,7 +301,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -311,7 +311,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -321,7 +321,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -331,7 +331,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -341,7 +341,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -351,7 +351,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -361,7 +361,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -371,7 +371,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -381,7 +381,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -391,7 +391,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -401,7 +401,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -411,7 +411,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -421,7 +421,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -431,7 +431,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -441,7 +441,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -451,7 +451,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -461,7 +461,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -471,7 +471,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -481,7 +481,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -491,7 +491,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -501,7 +501,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -511,7 +511,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -521,7 +521,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -531,7 +531,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -541,7 +541,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -551,7 +551,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -561,7 +561,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -571,7 +571,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -581,7 +581,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -591,7 +591,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -601,7 +601,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -611,7 +611,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -621,7 +621,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -631,7 +631,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -641,7 +641,7 @@ Validating matrix multiplication on smaller matrix
  0  0  0  0      0  3  0  0     
  0  0  0  0      0  0  2  0     
 
-Enter the value of n: Report began: Sat Apr  1 10:42:07 2017
+Enter the value of n: Report began: Sat Apr  1 11:03:19 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -656,5 +656,5 @@ Elapsed time:         0.03
 DP MFLOPS:         71582.79 
 
 
-Report completed: Sat Apr  1 10:42:09 2017
+Report completed: Sat Apr  1 11:03:22 2017
 

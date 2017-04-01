@@ -25,7 +25,7 @@ void arr_copy(double *out, double in[], int n) {
         }
 }
 
-struct validationMatrix *buildValidationMatrix() {
+struct validationMatrix *buildValidationMatrix(int transpose) {
         struct validationMatrix *myValidationMatrix = malloc(sizeof(struct validationMatrix));
 
         /*
@@ -55,14 +55,25 @@ struct validationMatrix *buildValidationMatrix() {
         arr_copy(myValidationMatrix->a[2], a_3, 4);
         arr_copy(myValidationMatrix->a[3], a_4, 4);
 
-        double b_1[4] = {4,0,0,9};
-        double b_2[4] = {0,0,2,0};
-        double b_3[4] = {0,0,0,0};
-        double b_4[4] = {0,3,0,0};
-        arr_copy(myValidationMatrix->b[0], b_1, 4);
-        arr_copy(myValidationMatrix->b[1], b_2, 4);
-        arr_copy(myValidationMatrix->b[2], b_3, 4);
-        arr_copy(myValidationMatrix->b[3], b_4, 4);
+        if (!transpose) {
+                double b_1[4] = {4,0,0,9};
+                double b_2[4] = {0,0,2,0};
+                double b_3[4] = {0,0,0,0};
+                double b_4[4] = {0,3,0,0};
+                arr_copy(myValidationMatrix->b[0], b_1, 4);
+                arr_copy(myValidationMatrix->b[1], b_2, 4);
+                arr_copy(myValidationMatrix->b[2], b_3, 4);
+                arr_copy(myValidationMatrix->b[3], b_4, 4);
+        } else {
+                double b_1[4] = {4,0,0,0};
+                double b_2[4] = {0,0,0,3};
+                double b_3[4] = {0,2,0,0};
+                double b_4[4] = {9,0,0,0};
+                arr_copy(myValidationMatrix->b[0], b_1, 4);
+                arr_copy(myValidationMatrix->b[1], b_2, 4);
+                arr_copy(myValidationMatrix->b[2], b_3, 4);
+                arr_copy(myValidationMatrix->b[3], b_4, 4);
+        }
 
         double expected_1[4] = {36,6,0,81};
         double expected_2[4] = {0,0,6,0};

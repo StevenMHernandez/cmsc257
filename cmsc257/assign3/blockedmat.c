@@ -55,7 +55,7 @@ int main (void)
         printf("Report began: %s\n\n", ctime(&mytime));
 
         // validate matrix multiplication
-        struct validationMatrix * validator = buildValidationMatrix();
+        struct validationMatrix * validator = buildValidationMatrix(0);
 
         multiply(validator->a,validator->b,validator->c, 4);
 
