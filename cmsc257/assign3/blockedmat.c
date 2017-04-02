@@ -76,7 +76,7 @@ int main (int argc, char *argv[])
         int blocksize = 1;
 
         // determine block size based on arg passed in originally
-        // the argument passed in will divide `n` by either 1,2,4
+        // the argument passed in will divide `n` by either 1,2,4,8
         switch(*argv[1]) {
         case '1':
                 blocksize = 1;
@@ -86,6 +86,9 @@ int main (int argc, char *argv[])
                 break;
         case '4':
                 blocksize = 4;
+                break;
+        case '8':
+                blocksize = 8;
                 break;
         default:
                 blocksize = 1;

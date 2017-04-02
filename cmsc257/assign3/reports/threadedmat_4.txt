@@ -1,4 +1,4 @@
-Report began: Sat Apr  1 23:30:31 2017
+Report began: Sat Apr  1 23:33:12 2017
 
 
 
@@ -19,5 +19,5 @@ Elapsed time:         0.02
 DP MFLOPS:        107374.18 
 
 
-Report completed: Sat Apr  1 23:30:33 2017
+Report completed: Sat Apr  1 23:33:15 2017
 

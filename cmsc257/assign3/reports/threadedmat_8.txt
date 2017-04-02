@@ -13,11 +13,4 @@ Validating matrix multiplication on smaller matrix
 
 Testing large matrixes 
 Enter the value of n: 1024
-Block step size: 256
-
-Elapsed time:        12.37 
-DP MFLOPS:           173.60 
-
-
-Report completed: Sat Apr  1 23:33:28 2017
-
+Block step size: 128
