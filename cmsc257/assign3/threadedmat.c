@@ -9,6 +9,8 @@
 
 double start, stop, used, mf;
 
+double *mem;
+
 double ftime(void);
 void multiply (double **a, double **b, double **c, int n);
 
@@ -20,8 +22,6 @@ double ftime (void)
 
         return (t.tms_utime + t.tms_stime) / 100.0;
 }
-
-double *mem;
 
 void multiply (double **a, double **b, double **c, int n)
 {
@@ -67,6 +67,8 @@ void multiply (double **a, double **b, double **c, int n)
 
 int main (void)
 {
+        int shmfd;
+
         time_t mytime;
         mytime = time(NULL);
         printf("Report began: %s\n\n", ctime(&mytime));
@@ -93,11 +95,28 @@ int main (void)
         b= (double**)malloc(n*sizeof(double));
         c= (double**)malloc(n*sizeof(double));
 
+        /*
+         * create shared memory for validation memory
+         */
+        shmfd = shm_open ( "/hernandez_shr2", O_RDWR | O_CREAT, 0666 );
+        if ( shmfd < 0 ) {
+                fprintf(stderr,"Could not create brs_memory\n");
+                exit(1);
+        }
+        ftruncate (shmfd, n*n*3*sizeof(double));
+        mem = (double *)mmap ( NULL, n*n*3*sizeof(double), PROT_READ | PROT_WRITE, MAP_SHARED, shmfd, 0 );
+        if ( mem == NULL ) {
+                fprintf(stderr,"Could not map brs_memory\n");
+                exit(1);
+        }
+        close ( shmfd );
+        shm_unlink ( "/hernandez_shr2" );
+
         for (i=0; i<n; i++)
         {
-                a[i]= malloc(sizeof(double)*n);
-                b[i]= malloc(sizeof(double)*n);
-                c[i]= malloc(sizeof(double)*n);
+                a[i] = &mem[i];
+                b[i] = &mem[i + (n*n)];
+                c[i] = &mem[i + (n*n*2)];
         }
 
         for (i=0; i<n; i++)

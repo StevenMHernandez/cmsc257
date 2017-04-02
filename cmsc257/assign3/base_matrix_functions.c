@@ -49,7 +49,7 @@ struct validationMatrix *buildSharedMemoryMatrix(double *mem) {
                 exit(1);
         }
         close ( shmfd );
-        shm_unlink ( "/brs_memory" );
+        shm_unlink ( "/hernandez_shr" );
 
         struct validationMatrix *myValidationMatrix = malloc(sizeof(struct validationMatrix));
 
@@ -61,7 +61,7 @@ struct validationMatrix *buildSharedMemoryMatrix(double *mem) {
         int i;
 
         for (i=0; i<4; i++) {
-                myValidationMatrix->a[i] = &mem[i * 4];
+                myValidationMatrix->a[i] = &mem[i*4];
                 myValidationMatrix->b[i] = &mem[(i*4) + 16];
                 myValidationMatrix->c[i] = &mem[(i*4) + 32];
                 myValidationMatrix->expected[i] = &mem[(i*4) + 48];
