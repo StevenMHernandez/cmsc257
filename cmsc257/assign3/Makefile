@@ -1,42 +1,17 @@
-# Make environment
-INCLUDES=-I.
-CC=gcc
-CFLAGS=-I. -c -g -Wall -Wextra $(INCLUDES)
-LINKARGS=-lm
-LIBS=-lm
+normalmat : normalmat.o base_matrix_functions.o
+	gcc normalmat.c -o normalmat -lrt
 
-# Files
-OBJECT_FILES=	base_matrix_functions.o
+transposemat : transposemat.o base_matrix_functions.o
+	gcc transposemat.c -o transposemat -lrt
 
-# Productions
-all : normalmat \ transposemat \ blockedmat \ threadedmat
+blockedmat : blockedmat.o base_matrix_functions.o
+	gcc blockedmat.c -o blockedmat -lrt
 
-normalmat : normalmat.o
-	$(CC) $(LINKARGS) normalmat.o -o $@ $(LIBS)
-
-normalmat.o : normalmat.c base_matrix_functions.c
-	$(CC) $(CFLAGS) $< -o $@
-
-transposemat : transposemat.o
-	$(CC) $(LINKARGS) transposemat.o -o $@ $(LIBS)
-
-transposemat.o : transposemat.c base_matrix_functions.c
-	$(CC) $(CFLAGS) $< -o $@
-
-blockedmat : blockedmat.o
-	$(CC) $(LINKARGS) blockedmat.o -o $@ $(LIBS)
-
-blockedmat.o : blockedmat.c base_matrix_functions.c
-	$(CC) $(CFLAGS) $< -o $@
-
-threadedmat : threadedmat.o
-	$(CC) $(LINKARGS) threadedmat.o -o $@ $(LIBS)
-
-threadedmat.o : threadedmat.c base_matrix_functions.c
-	$(CC) $(CFLAGS) $< -o $@
+threadedmat : threadedmat.o base_matrix_functions.o
+	gcc threadedmat.c -o threadedmat -lrt
 
 base_matrix_functions.o : base_matrix_functions.c
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@ $(LIBS)
 
 clean :
 	rm -f normalmat transposemat blockedmat threadedmat normalmat.o transposemat.o blockedmat.o threadedmat.o $(OBJECT_FILES)

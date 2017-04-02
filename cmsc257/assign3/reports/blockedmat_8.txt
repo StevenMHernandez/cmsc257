@@ -1,4 +1,4 @@
-Report began: Sat Apr  1 23:33:12 2017
+Report began: Sun Apr  2 14:32:38 2017
 
 
 
@@ -15,9 +15,9 @@ Testing large matrixes
 Enter the value of n: 1024
 Block step size: 128
 
-Elapsed time:        11.93 
-DP MFLOPS:           180.01 
+Elapsed time:        10.39 
+DP MFLOPS:           206.69 
 
 
-Report completed: Sat Apr  1 23:33:28 2017
+Report completed: Sun Apr  2 14:32:58 2017
 

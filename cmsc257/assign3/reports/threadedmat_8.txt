@@ -1,4 +1,4 @@
-Report began: Sat Apr  1 23:33:12 2017
+Report began: Sun Apr  2 14:32:38 2017
 
 
 
@@ -14,3 +14,10 @@ Validating matrix multiplication on smaller matrix
 Testing large matrixes 
 Enter the value of n: 1024
 Block step size: 128
+
+Elapsed time:         0.21 
+DP MFLOPS:         10226.11 
+
+
+Report completed: Sun Apr  2 14:32:44 2017
+
