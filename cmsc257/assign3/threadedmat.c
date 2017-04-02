@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <unistd.h>
+#include <semaphore.h>
 #include <time.h>
 #include "base_matrix_functions.c"
 
@@ -11,6 +12,7 @@
 double start, stop, used, mf;
 
 double *mem;
+sem_t **sem;
 
 double ftime(void);
 void multiply (double **a, double **b, double **c, int n, int blocksize);
@@ -23,6 +25,18 @@ double ftime (void)
 
         return (t.tms_utime + t.tms_stime) / 100.0;
 }
+
+// void work ( int me )
+// {
+//         int i, n;
+//         n = 10000;
+//         for ( i = 0; i < n; i++ ) {
+//                 sem_wait ( sem );
+//                 *mem = *mem + 1;
+//                 sem_post ( sem );
+//                 //usleep ( 100 );
+//         }
+// }
 
 void multiply (double **a, double **b, double **c, int n, int blocksize)
 {
@@ -55,8 +69,9 @@ void multiply (double **a, double **b, double **c, int n, int blocksize)
                                         for (i=i0; i < MIN(i0+step,n); i++) {
                                                 for (j=j0; j < MIN(j0+step,n); j++) {
                                                         for (k=k0; k < MIN(k0+step,n); k++) {
-                                                                // c[i][j]= 9;
+                                                                sem_wait (sem[(i*n)+k]);
                                                                 c[i][j]= c[i][j] + a[i][k] * b[k][j];
+                                                                sem_post (sem[(i*n)+k]);
                                                         }
                                                 }
                                         }
@@ -72,6 +87,8 @@ void multiply (double **a, double **b, double **c, int n, int blocksize)
 int main (int argc, char *argv[])
 {
         int shmfd;
+        int i, j, n;
+        double **a, **b, **c;
 
         time_t mytime;
         mytime = time(NULL);
@@ -82,12 +99,23 @@ int main (int argc, char *argv[])
         struct validationMatrix *validator = buildSharedMemoryMatrix(mem);
         addValidationData(validator, 0);
 
+        /*
+         * create semaphores
+         */
+        sem = malloc(4*4*sizeof(sem_t));
+        for (i = 0; i < 4; i++) {
+                sem[i] = sem_open ( "hernandez_sem", O_CREAT, 0666, 1 );
+                if ( sem[i] == NULL ) {
+                        fprintf(stderr,"Could not create brs semaphore\n");
+                        exit(1);
+                }
+                sem_unlink ( "hernandez_sem" );
+        }
+        free(sem);
+
         multiply(validator->a,validator->b,validator->c, 4, 2);
 
         validate(validator);
-
-        int i, j, n;
-        double **a, **b, **c;
 
         printf ("Testing large matrixes \n");
         printf ( "Enter the value of n: ");
@@ -136,6 +164,20 @@ int main (int argc, char *argv[])
         }
         close ( shmfd );
         shm_unlink ( "/hernandez_shr2" );
+
+        /*
+         * create semaphores
+         */
+        sem = malloc(n*n*sizeof(sem_t));
+        for (i = 0; i < n; i++) {
+                sem[i] = sem_open ( "hernandez_sem2", O_CREAT, 0666, 1 );
+                if ( sem[i] == NULL ) {
+                        fprintf(stderr,"Could not create brs semaphore\n");
+                        exit(1);
+                }
+                sem_unlink ( "hernandez_sem2" );
+        }
+        free(sem);
 
         for (i=0; i<n; i++)
         {

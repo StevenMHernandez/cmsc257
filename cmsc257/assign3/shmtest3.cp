@@ -19,7 +19,6 @@ void work ( int me )
                 sem_wait ( sem );
                 *mem = *mem + 1;
                 sem_post ( sem );
-                //usleep ( 100 );
         }
 }
 
