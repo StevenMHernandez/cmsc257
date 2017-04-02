@@ -4,12 +4,13 @@
 #include <time.h>
 #include "base_matrix_functions.c"
 
+#define MAX(a,b) (a < b ? b : a)
 #define MIN(a,b) (a > b ? b : a)
 
 double start, stop, used, mf;
 
 double ftime(void);
-void multiply (double **a, double **b, double **c, int n);
+void multiply (double **a, double **b, double **c, int n, int blocksize);
 
 double ftime (void)
 {
@@ -20,7 +21,7 @@ double ftime (void)
         return (t.tms_utime + t.tms_stime) / 100.0;
 }
 
-void multiply (double **a, double **b, double **c, int n)
+void multiply (double **a, double **b, double **c, int n, int blocksize)
 {
         int i, j, k, i0, j0, k0;
 
@@ -31,7 +32,10 @@ void multiply (double **a, double **b, double **c, int n)
                         c[i][j] = 0;
         }
 
-        int step = 8;
+        int step = MAX(1,n/blocksize);
+
+        printf("\nBlock step size: %d\n", step);
+
 
         for (i0 = 0; i0 < n; i0 += step) {
                 for (j0 = 0; j0 < n; j0 += step) {
@@ -48,7 +52,7 @@ void multiply (double **a, double **b, double **c, int n)
         }
 }
 
-int main (void)
+int main (int argc, char *argv[])
 {
         time_t mytime;
         mytime = time(NULL);
@@ -57,7 +61,7 @@ int main (void)
         // validate matrix multiplication
         struct validationMatrix * validator = buildValidationMatrix(0);
 
-        multiply(validator->a,validator->b,validator->c, 4);
+        multiply(validator->a,validator->b,validator->c, 4, 2);
 
         validate(validator);
 
@@ -68,6 +72,24 @@ int main (void)
         printf ( "Enter the value of n: ");
         scanf ( "%d", &n);
         printf("%d", n);
+
+        int blocksize = 1;
+
+        // determine block size based on arg passed in originally
+        // the argument passed in will divide `n` by either 1,2,4
+        switch(*argv[1]) {
+        case '1':
+                blocksize = 1;
+                break;
+        case '2':
+                blocksize = 2;
+                break;
+        case '4':
+                blocksize = 4;
+                break;
+        default:
+                blocksize = 1;
+        }
 
         //Populate arrays....
         a= (double**)malloc(n*sizeof(double));
@@ -94,7 +116,7 @@ int main (void)
         }
 
         start = ftime();
-        multiply (a,b,c,n);
+        multiply (a,b,c,n,blocksize);
         stop = ftime();
         used = stop - start;
         mf = (n*n*n *2.0) / used / 1000000.0;

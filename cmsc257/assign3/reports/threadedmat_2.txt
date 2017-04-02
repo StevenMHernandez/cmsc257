@@ -1,6 +1,8 @@
 Report began: Sat Apr  1 23:30:31 2017
 
 
+
+Block step size: 2
 Validating matrix multiplication on smaller matrix
       A      x      B        =    computed        expected
  9  0  0  2      4  0  0  9     36  6  0 81     36  6  0 81     
@@ -11,9 +13,11 @@ Validating matrix multiplication on smaller matrix
 
 Testing large matrixes 
 Enter the value of n: 1024
-Elapsed time:        14.64 
-DP MFLOPS:           146.69 
+Block step size: 512
+
+Elapsed time:         0.01 
+DP MFLOPS:        214748.36 
 
 
-Report completed: Sat Apr  1 23:30:48 2017
+Report completed: Sat Apr  1 23:30:35 2017
 

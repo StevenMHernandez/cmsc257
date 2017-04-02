@@ -11,9 +11,6 @@
 
 double start, stop, used, mf;
 
-double ftime(void);
-void multiply (double **a, double **b, double **c, int n);
-
 /**
  * we want to validate that a x b = expected, which we will store in c
  */
