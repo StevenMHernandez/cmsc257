@@ -1,4 +1,4 @@
-Report began: Sat Apr  1 12:38:11 2017
+Report began: Sat Apr  1 23:00:39 2017
 
 
 Validating matrix multiplication on smaller matrix
@@ -11,9 +11,9 @@ Validating matrix multiplication on smaller matrix
 
 Testing large matrixes 
 Enter the value of n: 1024
-Elapsed time:        17.34 
-DP MFLOPS:           123.85 
+Elapsed time:        16.24 
+DP MFLOPS:           132.23 
 
 
-Report completed: Sat Apr  1 12:38:30 2017
+Report completed: Sat Apr  1 23:00:57 2017
 

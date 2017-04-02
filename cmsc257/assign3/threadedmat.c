@@ -21,6 +21,8 @@ double ftime (void)
         return (t.tms_utime + t.tms_stime) / 100.0;
 }
 
+double *mem;
+
 void multiply (double **a, double **b, double **c, int n)
 {
         int i, j, k, i0, j0, k0, pid;
@@ -49,6 +51,7 @@ void multiply (double **a, double **b, double **c, int n)
                                         for (i=i0; i < MIN(i0+step,n); i++) {
                                                 for (j=j0; j < MIN(j0+step,n); j++) {
                                                         for (k=k0; k < MIN(k0+step,n); k++) {
+                                                                // c[i][j]= 9;
                                                                 c[i][j]= c[i][j] + a[i][k] * b[k][j];
                                                         }
                                                 }
@@ -69,7 +72,9 @@ int main (void)
         printf("Report began: %s\n\n", ctime(&mytime));
 
         // validate matrix multiplication
-        struct validationMatrix * validator = buildValidationMatrix(0);
+        // note because we are using shared memory, this is a bit different than the others
+        struct validationMatrix *validator = buildSharedMemoryMatrix(mem);
+        addValidationData(validator, 0);
 
         multiply(validator->a,validator->b,validator->c, 4);
 

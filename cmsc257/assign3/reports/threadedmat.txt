@@ -1,13 +1,13 @@
-Report began: Sat Apr  1 12:38:11 2017
+Report began: Sat Apr  1 23:00:39 2017
 
 
 Validating matrix multiplication on smaller matrix
       A      x      B        =    computed        expected
- 9  0  0  2      4  0  0  9      0  0  0  0     36  6  0 81     
- 0  3  2  0      0  0  2  0      0  0  0  0      0  0  6  0     
- 0  0  0  1      0  0  0  0      0  0  0  0      0  3  0  0     
- 0  1  0  0      0  3  0  0      0  0  0  0      0  0  2  0     
-24 errors found when validating
+ 9  0  0  2      4  0  0  9     36  6  0 81     36  6  0 81     
+ 0  3  2  0      0  0  2  0      0  0  6  0      0  0  6  0     
+ 0  0  0  1      0  0  0  0      0  3  0  0      0  3  0  0     
+ 0  1  0  0      0  3  0  0      0  0  2  0      0  0  2  0     
+0 errors found when validating
 
 Testing large matrixes 
 Enter the value of n: 1024
@@ -15,5 +15,5 @@ Elapsed time:         0.03
 DP MFLOPS:         71582.79 
 
 
-Report completed: Sat Apr  1 12:38:13 2017
+Report completed: Sat Apr  1 23:00:41 2017
 
