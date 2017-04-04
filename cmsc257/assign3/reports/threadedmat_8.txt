@@ -1,4 +1,4 @@
-Report began: Sun Apr  2 14:32:38 2017
+Report began: Mon Apr  3 17:26:23 2017
 
 
 
@@ -12,12 +12,12 @@ Validating matrix multiplication on smaller matrix
 0 errors found when validating
 
 Testing large matrixes 
-Enter the value of n: 1024
-Block step size: 128
+Enter the value of n: 4096
+Block step size: 512
 
-Elapsed time:         0.21 
-DP MFLOPS:         10226.11 
+Elapsed time:         0.78 
+DP MFLOPS:             0.00 
 
 
-Report completed: Sun Apr  2 14:32:44 2017
+Report completed: Mon Apr  3 17:26:24 2017
 
