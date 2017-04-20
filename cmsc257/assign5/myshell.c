@@ -7,7 +7,14 @@
 
 char input[51];
 
+void signal_handler(int no) {
+    // nop
+}
+
 int main(int argc, char const *argv[]) {
+        // prevent ^C
+        signal(SIGINT, signal_handler);
+
         while(1) {
                 // decide prompt
                 if (argc >= 3 && strncmp(argv[1], "-p", 2) == 0) {
@@ -50,7 +57,7 @@ int main(int argc, char const *argv[]) {
                                                 chdir(parameters);
                                         }
                                 } else if (strncmp(command, "exit", 4) == 0) {
-                                        raise(SIGTERM);
+                                        raise(SIGKILL);
                                 } else if (strncmp(command, "pid", 3) == 0) {
                                         printf("PID: %d\n", getpid());
                                 } else if (strncmp(command, "ppid", 4) == 0) {
