@@ -62,7 +62,6 @@ int main(int argc, char const *argv[]) {
 
                 FILE *file = fopen(argv[1], "w+");
                 while (read(socket_fd, &input, 50) && strcmp(input, "cmsc257") != 0) {
-                        printf("Got: %s\n", input);
                         fputs(input,file);
                 };
 

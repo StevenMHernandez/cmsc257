@@ -21,9 +21,6 @@ pid_t child_pid;
 int server, client;
 
 void signal_handler(int no) {
-        if (child_pid) {
-                printf("\nTerminating now.\n");
-        }
         close(server);
         close(client);
         raise(SIGKILL);
@@ -63,11 +60,9 @@ int main(int argc, char const *argv[]) {
                 }
                 printf("server new client connection [%s/%d]\n", inet_ntoa(caddr.sin_addr), caddr.sin_port);
 
-                child_pid = fork();
-                if (child_pid == 0) {
-                        // run in child process
-                        read(client, &input, 50);
-                        printf("received a value of [%s]\n", input);
+                        int count = read(client, &input, 50);
+                        input[count] = '\0';
+			printf("received a value of [%s]\n", input);
 
                         // check if file exists
                         // @SEE http://stackoverflow.com/a/230068
@@ -93,10 +88,5 @@ int main(int argc, char const *argv[]) {
                         }
 
                         close(client);
-
-                        _exit(0);
-                } else {
-
-                }
         }
 }
