@@ -8,11 +8,21 @@
 #include <netinet/in.h>
 #include <arpa/inet.h>
 
+#define FILE_NOT_FOUND 0
+#define FILE_EXISTS 1
+
 int errno = 3;
 
 char input[51];
 
 int main(int argc, char const *argv[]) {
+        if (argc < 2) {
+                printf("ERROR: please input a filename.\n");
+                return(-1);
+        }
+
+        strcpy(input, argv[1]);
+
         int socket_fd;
         uint32_t value;
         struct sockaddr_in caddr;
@@ -36,17 +46,29 @@ int main(int argc, char const *argv[]) {
         }
 
         value = htonl(1);
-        if (write(socket_fd, &value, sizeof(value)) != sizeof(value)) {
+        if (write(socket_fd, &input, 50) != sizeof(value)) {
                 printf("error writing network data [%s]\n", strerror(errno));
         }
-        printf("sent a value of [%d]\n", ntohl(value));
+        printf("sent a value of [%s]\n", input);
 
+        // Receive confirmation from server that file exists or not
         if (read(socket_fd, &value, sizeof(value)) != sizeof(value)) {
-                printf("error writing network data [%s]\n", strerror(errno));
+                printf("error reading network data [%s]\n", strerror(errno));
         }
-
         value = ntohl(value);
-        printf("received a value of [%d]\n", value);
+
+        if (value == FILE_EXISTS) {
+                printf("File exists, receiving file.\n");
+
+                FILE *file = fopen(argv[1], "w+");
+                while (read(socket_fd, &input, 50) && strcmp(input, "cmsc257") != 0) {
+                        printf("Got: %s\n", input);
+                        fputs(input,file);
+                };
+                printf("File downloaded.");
+        } else if (value == FILE_NOT_FOUND) {
+                printf("File not found on the server.\n");
+        }
 
         close(socket_fd);
         return (0);
