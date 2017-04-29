@@ -7,6 +7,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include <time.h>
 
 #define FILE_NOT_FOUND 0
 #define FILE_EXISTS 1
@@ -15,8 +16,21 @@ int errno = 3;
 
 char input[51];
 
+pid_t child_pid;
+
+int server, client;
+
+void signal_handler(int no) {
+        if (child_pid) {
+                printf("\nTerminating now.\n");
+        }
+        close(server);
+        close(client);
+        raise(SIGKILL);
+}
+
 int main(int argc, char const *argv[]) {
-        int server, client;
+        signal(SIGINT, signal_handler);
         uint32_t value = 33, inet_len;
         struct sockaddr_in saddr, caddr;
 
@@ -49,30 +63,40 @@ int main(int argc, char const *argv[]) {
                 }
                 printf("server new client connection [%s/%d]\n", inet_ntoa(caddr.sin_addr), caddr.sin_port);
 
-                read(client, &input, 50);
-                printf("received a value of [%s]\n", input);
+                child_pid = fork();
+                if (child_pid == 0) {
+                        // run in child process
+                        read(client, &input, 50);
+                        printf("received a value of [%s]\n", input);
 
-                // check if file exists
-                // @SEE http://stackoverflow.com/a/230068
-                value = ntohl(access(input, F_OK) != -1);
+                        // check if file exists
+                        // @SEE http://stackoverflow.com/a/230068
+                        value = ntohl(access(input, F_OK) != -1);
 
-                if (write(client, &value, sizeof(value)) != sizeof(value)) {
-                        printf("Client accept error\n");
-                        close(server);
-                        return(-1);
+                        if (write(client, &value, sizeof(value)) != sizeof(value)) {
+                                printf("Client accept error\n");
+                                close(server);
+                                return(-1);
+                        }
+
+                        if (htonl(value) == FILE_EXISTS) {
+                                printf("File exists, starting transfer\n");
+                                FILE *file = fopen(input, "r+");
+                                while (fgets(input, 50, file) != NULL) {
+                                        write(client, &input, 50);
+                                }
+                                strcpy(input, "cmsc257");
+                                write(client, &input, 50);
+                                printf("Transfer complete\n\n");
+                        } else {
+                                printf("File does not exists, closing.\n\n");
+                        }
+
+                        close(client);
+
+                        _exit(0);
+                } else {
+
                 }
-                printf("sent a value of [%d]\n", value);
-
-                if (htonl(value) == FILE_EXISTS) {
-                    FILE *file = fopen(input, "r+");
-                    while (fgets(input, 50, file) != NULL) {
-                        printf("read [%s]\n", input);
-                        write(client, &input, 50);
-                    }
-                    strcpy(input, "cmsc257");
-                    write(client, &input, 50);
-                }
-
-                close(client);
         }
 }

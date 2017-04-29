@@ -46,7 +46,7 @@ int main(int argc, char const *argv[]) {
         }
 
         value = htonl(1);
-        if (write(socket_fd, &input, 50) != sizeof(value)) {
+        if (write(socket_fd, &input, strlen(input)) != strlen(input)) {
                 printf("error writing network data [%s]\n", strerror(errno));
         }
         printf("sent a value of [%s]\n", input);
@@ -65,7 +65,12 @@ int main(int argc, char const *argv[]) {
                         printf("Got: %s\n", input);
                         fputs(input,file);
                 };
-                printf("File downloaded.");
+
+                if (strcmp(input, "cmsc257") != 0) {
+                        printf("Server process was terminated. File transfer stopping.\n");
+                } else {
+                        printf("File downloaded.\n");
+                }
         } else if (value == FILE_NOT_FOUND) {
                 printf("File not found on the server.\n");
         }
