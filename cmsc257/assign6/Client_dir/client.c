@@ -19,7 +19,7 @@ int main(int argc, char const *argv[]) {
         char *ip = "127.0.0.1";
 
         caddr.sin_family = AF_INET;
-        caddr.sin_port = htons(16453);
+        caddr.sin_port = htons(2223);
         if (inet_aton(ip, &caddr.sin_addr) == 0) {
                 return(-1);
         }
@@ -36,12 +36,12 @@ int main(int argc, char const *argv[]) {
         }
 
         value = htonl(1);
-        if (write(socket_fd, &value, sizeof(value) != sizeof(value))) {
+        if (write(socket_fd, &value, sizeof(value)) != sizeof(value)) {
                 printf("error writing network data [%s]\n", strerror(errno));
         }
         printf("sent a value of [%d]\n", ntohl(value));
 
-        if (read(socket_fd, &value, sizeof(value) != sizeof(value))) {
+        if (read(socket_fd, &value, sizeof(value)) != sizeof(value)) {
                 printf("error writing network data [%s]\n", strerror(errno));
         }
 

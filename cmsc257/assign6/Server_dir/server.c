@@ -9,14 +9,14 @@
 #include <arpa/inet.h>
 
 int errno = 3;
-
-int main(int argc, char const *argv[]) {
         int server, client;
         uint32_t value = 33, inet_len;
         struct sockaddr_in saddr, caddr;
 
+int main(int argc, char const *argv[]) {
+
         saddr.sin_family = AF_INET;
-        saddr.sin_port = htons(16453);
+        saddr.sin_port = htons(2223);
         saddr.sin_addr.s_addr = htonl(INADDR_ANY);
 
         server = socket(PF_INET, SOCK_STREAM, 0);
@@ -44,18 +44,17 @@ int main(int argc, char const *argv[]) {
                 }
                 printf("server new client connection [%s/%d]", inet_ntoa(caddr.sin_addr), caddr.sin_port);
 
-                if (read(client, &value, sizeof(value) != sizeof(value))) {
+                if (read(client, &value, sizeof(value)) != sizeof(value)) {
                         printf("Network data writing error [%s]\n", strerror(errno));
                         close(server);
                         return(-1);
                 }
-                printf("received a value of [%d]\n", value);
                 value = ntohl(value);
-                printf("which is [%d]\n", value);
+                printf("received a value of [%d]\n", value);
 
                 value++;
 
-                value = 9;
+                value = htonl(9);
                 if (write(client, &value, sizeof(value)) != sizeof(value)) {
                         printf("Client accept error [%s]\n", strerror(errno));
                         close(server);
